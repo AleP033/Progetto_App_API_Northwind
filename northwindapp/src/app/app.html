@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Prodotti da Northwind</h1>
+
+  <input type="text" 
+  placeholder="Filtra per nome" 
+  [(ngModel)]="filterText" 
+  
+  />
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Prezzo</th>
+        <th>Quantità per unità</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+  <td>{{ product.productName }}</td>
+  <td>{{ product.unitPrice | currency:'EUR' }}</td>
+  <td>{{ product.quantityPerUnit }}</td>
+</tr>
+<p *ngIf="filteredProducts.length === 0">Nessun prodotto trovato.</p>
+
+
+    </tbody>
+  </table>
+  
+  
+
+
+</div>
