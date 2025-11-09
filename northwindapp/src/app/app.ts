@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   imports: [ CommonModule,FormsModule, CurrencyPipe],
   templateUrl: './app.html',
 })
-export class AppComponent {
+export class App {
   private northwind = inject(Northwind);
 
   products: any[] = [];
